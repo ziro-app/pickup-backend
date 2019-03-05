@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.2.0",
+    "google-spreadsheet": "^2.0.7",
     "netlify-lambda": "^1.4.2"
   }
 }
