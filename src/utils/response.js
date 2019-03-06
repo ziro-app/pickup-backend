@@ -9,7 +9,6 @@ const response = (state) => {
 		methodError: 'Error. Invalid http method',
 		parametersError: 'Error. Invalid parameters',
 		executionError: 'Error. Internal execution error on runtime. Check logs',
-		dataError: 'Error. Invalid data structure',
 		ok: 'Success'
 	}
 	const body = JSON.stringify(message[state], null, 4) 

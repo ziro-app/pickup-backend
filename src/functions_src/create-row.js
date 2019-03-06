@@ -21,5 +21,5 @@ exports.handler = async ({ httpMethod, queryStringParameters, body }) => {
 	return response(state)
 }
 
-// curl -d '{}' -X POST https://pickup-backend.ziro.online/.netlify/functions/create-row
+// curl -d '{"pickup_code": "RL10106","date":"Tue Mar 05 2019 00:00:00 GMT-0800 (Pacific Standard Time)","reseller": "FABIANA DE CASSIA SILVA","supplier": "Abaut","address": "Bom Retiro - Correia de Melo, 84","bags": "4","invoice": "Sim","comments": "Preencher boleto"}' -X POST https://pickup-backend.ziro.online/.netlify/functions/create-row
 // curl -d '{"pickup_code": "RL10106","date":"Tue Mar 05 2019 00:00:00 GMT-0800 (Pacific Standard Time)","reseller": "FABIANA DE CASSIA SILVA","supplier": "Abaut","address": "Bom Retiro - Correia de Melo, 84","bags": "4","invoice": "Sim","comments": "Preencher boleto"}' -X POST http://localhost:9000/create-row
