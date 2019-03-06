@@ -21,5 +21,5 @@ exports.handler = async ({ httpMethod, queryStringParameters, body }) => {
 	return response(state)
 }
 
-// curl -d '{"start_date": "2019-02-14T20:00:00.000Z","representative":"Alan","reseller":"ADRIANA ALVES SILVA","category":"Venda","type":"Offline","end_date":"2019-03-01T20:00:00.000Z","time": "15:00","shipping": "DIRETO DO FORNECEDOR","address": "PC MONS JOSE MARIA MONTEIRO, 28, SAO PAULO, SP","packaging": "Livre","invoice": "Sem Nota","comments": "Urgente"}' -X POST https://sales-backend.ziro.online/.netlify/functions/create-row
-// curl -d '{"start_date": "2019-02-14T20:00:00.000Z","representative":"Alan","reseller":"ADRIANA ALVES SILVA","category":"Venda","type":"Offline","end_date":"2019-03-01T20:00:00.000Z"}' -X POST http://localhost:9000/create-row
+// curl -d '{}' -X POST https://pickup-backend.ziro.online/.netlify/functions/create-row
+// curl -d '{"pickup_code": "RL10106","date":"Tue Mar 05 2019 00:00:00 GMT-0800 (Pacific Standard Time)","reseller": "FABIANA DE CASSIA SILVA","supplier": "Abaut","address": "Bom Retiro - Correia de Melo, 84","bags": "4","invoice": "Sim","comments": "Preencher boleto"}' -X POST http://localhost:9000/create-row
