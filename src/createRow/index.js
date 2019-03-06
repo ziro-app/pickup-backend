@@ -1,5 +1,5 @@
 const { formatDate, now } = require('../utils/formatDate')
-// const addRowToSheet = require('./addRowToSheet')
+const addRowToSheet = require('./addRowToSheet')
 
 const createRow = async ({ pickup_code, date, reseller, supplier, address, bags, invoice, comments }) => {
 	const cadastro = now()
@@ -10,6 +10,9 @@ const createRow = async ({ pickup_code, date, reseller, supplier, address, bags,
 	const endereco = address
 	const conferencia = `retirar ${bags} sacola(s)${invoice === 'Sim' ? ', nota fiscal' : ''}`
 	const observacao = comments
+	const sheetStatus = await addRowToSheet({
+		cadastro, atendimento, codigo, data, lojista, endereco, conferencia, observacao
+	})
 	if ('ok')
 		return 'ok'
 	return 'dataError'
